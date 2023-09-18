@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script src="ha.js"></script>
+<script src="fixed_midashi.js"></script>
+<link rel="stylesheet" href="ha.css">
+<style type="text/css"></style>
+<script></script>
+</head>
+<body>
+<!--------------------->
+
+<div>
+①名簿読込：<button onclick="getCsv(0)">読込</button><!--<input type="file" id="select-file" onchange="selectFile()" />-->
+②生徒選択：<span id="selectbox"></span>
+<button onclick="alert('作成途中');">書込</button><br>
+</div>
+<!--------------------->
+③結果入力：<span id="namae1"></span>
+<!--------------------->
+<div class='box'><table class='map'>
+<tr>
+<td class="_td"><button onclick='chBxOn("true","u")'>check</button><br><button onclick='chBxOn("false","u")'>clear</button></td>
+<td id='ur8' onchange="td_color('ur8')">8<br><input type="text" name="ur8" class="chk"></td>
+<td id='ur7' onchange="td_color('ur7')">7<br><input type="text" name="ur7" class="chk"></td>
+<td id='ur6' onchange="td_color('ur6')">6<br><input type="text" name="ur6" class="chk"></td>
+<td id='ur5' onchange="td_color('ur5')">5<br><input type="text" name="ur5" class="chk"></td>
+<td id='ur4' onchange="td_color('ur4')">4<br><input type="text" name="ur4" class="chk"></td>
+<td id='ur3' onchange="td_color('ur3')">3<br><input type="text" name="ur3" class="chk"></td>
+<td id='ur2' onchange="td_color('ur2')">2<br><input type="text" name="ur2" class="chk"></td>
+<td id='ur1' onchange="td_color('ur1')">1<br><input type="text" name="ur1" class="chk"></td>
+<td id='ul1' onchange="td_color('ul1')">1<br><input type="text" name="ul1" class="chk"></td>
+<td id='ul2' onchange="td_color('ul2')">2<br><input type="text" name="ul2" class="chk"></td>
+<td id='ul3' onchange="td_color('ul3')">3<br><input type="text" name="ul3" class="chk"></td>
+<td id='ul4' onchange="td_color('ul4')">4<br><input type="text" name="ul4" class="chk"></td>
+<td id='ul5' onchange="td_color('ul5')">5<br><input type="text" name="ul5" class="chk"></td>
+<td id='ul6' onchange="td_color('ul6')">6<br><input type="text" name="ul6" class="chk"></td>
+<td id='ul7' onchange="td_color('ul7')">7<br><input type="text" name="ul7" class="chk"></td>
+<td id='ul8' onchange="td_color('ul8')">8<br><input type="text" name="ul8" class="chk"></td>
+</tr>
+<!--------------------->
+<tr>
+<td class="_td"><button onclick='chBxOnC("true","u")'>check</button><br><button onclick='chBxOnC("false","u")'>clear</button></td>
+<td class="_td">上</td>
+<td rowspan=2 colspan=2 class="_td">右</td>
+<td id='urE' onchange="td_color('urE')">E<br><input type="text" name="urE" class="chk"></td>
+<td id='urD' onchange="td_color('urD')">D<br><input type="text" name="urD" class="chk"></td>
+<td id='urC' onchange="td_color('urC')">C<br><input type="text" name="urC" class="chk"></td>
+<td id='urB' onchange="td_color('urB')">B<br><input type="text" name="urB" class="chk"></td>
+<td id='urA' onchange="td_color('urA')">A<br><input type="text" name="urA" class="chk"></td>
+<td id='ulA' onchange="td_color('ulA')">A<br><input type="text" name="ulA" class="chk"></td>
+<td id='ulB' onchange="td_color('ulB')">B<br><input type="text" name="ulB" class="chk"></td>
+<td id='ulC' onchange="td_color('ulC')">C<br><input type="text" name="ulC" class="chk"></td>
+<td id='ulD' onchange="td_color('ulD')">D<br><input type="text" name="ulD" class="chk"></td>
+<td id='ulE' onchange="td_color('ulE')">E<br><input type="text" name="ulE" class="chk"></td>
+<td rowspan=2 colspan=2 class="_td">左</td>
+<td class="_td">上</td>
+</tr>
+<!--------------------->
+<tr>
+<td class="_td"><button onclick='chBxOnC("true","s")'>check</button><br><button onclick='chBxOnC("false","s")'>clear</button></td>
+<td class="_td">下</td>
+<td id='srE' onchange="td_color('srE')">E<br><input type="text" name="srE" class="chk"></td>
+<td id='srD' onchange="td_color('srD')">D<br><input type="text" name="srD" class="chk"></td>
+<td id='srC' onchange="td_color('srC')">C<br><input type="text" name="srC" class="chk"></td>
+<td id='srB' onchange="td_color('srB')">B<br><input type="text" name="srB" class="chk"></td>
+<td id='srA' onchange="td_color('srA')">A<br><input type="text" name="srA" class="chk"></td>
+<td id='slA' onchange="td_color('slA')">A<br><input type="text" name="slA" class="chk"></td>
+<td id='slB' onchange="td_color('slB')">B<br><input type="text" name="slB" class="chk"></td>
+<td id='slC' onchange="td_color('slC')">C<br><input type="text" name="slC" class="chk"></td>
+<td id='slD' onchange="td_color('slD')">D<br><input type="text" name="slD" class="chk"></td>
+<td id='slE' onchange="td_color('slE')">E<br><input type="text" name="slE" class="chk"></td>
+<td class="_td">下</td>
+</tr>
+<!--------------------->
+<tr>
+<td class="_td"><button onclick='chBxOn("true","s")'>check</button><br><button onclick='chBxOn("false","s")'>clear</button></td>
+<td id='sr8' onchange="td_color('sr8')">8<br><input type="text" name="sr8" class="chk"></td>
+<td id='sr7' onchange="td_color('sr7')">7<br><input type="text" name="sr7" class="chk"></td>
+<td id='sr6' onchange="td_color('sr6')">6<br><input type="text" name="sr6" class="chk"></td>
+<td id='sr5' onchange="td_color('sr5')">5<br><input type="text" name="sr5" class="chk"></td>
+<td id='sr4' onchange="td_color('sr4')">4<br><input type="text" name="sr4" class="chk"></td>
+<td id='sr3' onchange="td_color('sr3')">3<br><input type="text" name="sr3" class="chk"></td>
+<td id='sr2' onchange="td_color('sr2')">2<br><input type="text" name="sr2" class="chk"></td>
+<td id='sr1' onchange="td_color('sr1')">1<br><input type="text" name="sr1" class="chk"></td>
+<td id='sl1' onchange="td_color('sl1')">1<br><input type="text" name="sl1" class="chk"></td>
+<td id='sl2' onchange="td_color('sl2')">2<br><input type="text" name="sl2" class="chk"></td>
+<td id='sl3' onchange="td_color('sl3')">3<br><input type="text" name="sl3" class="chk"></td>
+<td id='sl4' onchange="td_color('sl4')">4<br><input type="text" name="sl4" class="chk"></td>
+<td id='sl5' onchange="td_color('sl5')">5<br><input type="text" name="sl5" class="chk"></td>
+<td id='sl6' onchange="td_color('sl6')">6<br><input type="text" name="sl6" class="chk"></td>
+<td id='sl7' onchange="td_color('sl7')">7<br><input type="text" name="sl7" class="chk"></td>
+<td id='sl8' onchange="td_color('sl8')">8<br><input type="text" name="sl8" class="chk"></td>
+</tr>
+</table></div><br>
+<!--------------------->
+<!--<textarea id="kekka"></textarea>-->
+	<span id="hyou"></span>
+	<span id="hyou2"></span>
+</div>
+<!--------------------->
+</body>
+</html>
