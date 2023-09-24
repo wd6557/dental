@@ -1,2 +1,2 @@
 # dental
-GitHubの使い方の練習中です
+GitHubの練習中です
