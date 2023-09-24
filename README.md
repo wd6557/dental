@@ -1,2 +1,3 @@
 # dental
-GitHubの練習中です
+GitHubの練習をしています
+./pc2.png
